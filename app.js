@@ -1,6 +1,4 @@
 
-var isProduction = process.env.NODE_ENV === 'production';
-
 var express = require('express'),
     bodyParser = require('body-parser'),
     cors = require('cors');
@@ -21,7 +19,7 @@ const mongoose = require("mongoose");
 );
 
 mongoose.set("debug", true);*/
-
+var isProduction = process.env.NODE_ENV === 'production';
 mongoose.connect(
   process.env.MONGODB_URI, // obtiene la url de conexión desde las variables de entorno
   { useUnifiedTopology: true, useNewUrlParser: true, useCreateIndex: true }
