@@ -18,6 +18,21 @@ function obtenerProducto(req, res, next) {
     }).catch(next);
 }
 
+//Obtener todos los productos de una categoria en especifica
+/*function obtenerProductos(req, res, next) {                             
+  Producto.find({categoria: req.params.id}, (err, products) => {
+    if (!products || err) {
+      return res.sendStatus(401)
+    }
+    //obtenemos todos los productos y los guardamos en un arreglo de objetos
+    var productsMap = {};
+    products.forEach(function(product) {
+      productsMap[product._id] = product;
+    });
+    res.send(productsMap); 
+  }).catch(next);
+}*/
+
 //Obtener todos los productos
 function obtenerProductos(req, res, next) {                             
     Producto.find({}, (err, products) => {
