@@ -26,8 +26,8 @@ mongoose.connect(
     useUnifiedTopology: true, 
     useNewUrlParser: true, 
     useCreateIndex: true, 
-    socketTimeoutMS: 10000, 
-    connectTimeoutMS: 10000 },
+    socketTimeoutMS: 100000, 
+    connectTimeoutMS: 100000 },
   function (err, res) {
       try {
           console.log('Connected to Database, sí se conecta');
