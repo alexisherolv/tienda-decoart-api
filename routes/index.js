@@ -10,7 +10,5 @@ router.use('/categorias', require('./categorias'));
 router.use('/cupones', require('./cupones'));
 router.use('/orden-compra', require('./orden-compra'));
 router.use('/orden-producto', require('./orden-producto'));
-/*router.use('/mascotas', require('./mascotas'));
-router.use('/solicitudes', require('./solicitudes'));*/
 
 module.exports = router;
