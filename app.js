@@ -20,22 +20,10 @@ const mongoose = require("mongoose");
 
 mongoose.set("debug", true);*/
 var isProduction = process.env.NODE_ENV === 'production';
+
 mongoose.connect(
   process.env.MONGODB_URI, // obtiene la url de conexión desde las variables de entorno
-  { 
-    useUnifiedTopology: true, 
-    useNewUrlParser: true, 
-    useCreateIndex: true, 
-    socketTimeoutMS: 45000,
-    serverSelectionTimeoutMS: 15000, 
-    connectTimeoutMS: 100000 },
-  function (err, res) {
-      try {
-          console.log('Connected to Database, sí se conecta');
-      } catch (err) {
-          throw err;
-      }
-  }
+  { useUnifiedTopology: true, useNewUrlParser: true, useCreateIndex: true }
 );
 
 const errorhandler = require('errorhandler')
